@@ -1,0 +1,23 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: ai-monitor-service
+  kafka:
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    consumer:
+      group-id: ai-monitor-service
+      auto-offset-reset: earliest
+  ai:
+    anthropic:
+      api-key: ${ANTHROPIC_API_KEY:dummy-key}
+      chat:
+        options:
+          model: ${ANTHROPIC_MODEL:claude-sonnet-4-20250514}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics

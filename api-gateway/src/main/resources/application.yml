@@ -1,0 +1,43 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: core-banking-accounts
+          uri: ${CORE_BANKING_URI:http://localhost:8081}
+          predicates:
+            - Path=/api/accounts/**
+        - id: core-banking-transactions
+          uri: ${CORE_BANKING_URI:http://localhost:8081}
+          predicates:
+            - Path=/api/transactions/**
+        - id: product-config
+          uri: ${PRODUCT_URI:http://localhost:8082}
+          predicates:
+            - Path=/api/products/**
+        - id: notification
+          uri: ${NOTIFICATION_URI:http://localhost:8083}
+          predicates:
+            - Path=/api/notifications/**
+        - id: reporting
+          uri: ${REPORTING_URI:http://localhost:8084}
+          predicates:
+            - Path=/api/reports/**
+        - id: audit
+          uri: ${AUDIT_URI:http://localhost:8085}
+          predicates:
+            - Path=/api/audit/**
+        - id: third-party
+          uri: ${THIRDPARTY_URI:http://localhost:8086}
+          predicates:
+            - Path=/api/third-party/**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
