@@ -105,3 +105,4 @@ This repository is **Claude Code compatible**. Before changing anything, read:
 - [`.claude/skills/`](.claude/skills) — reusable task playbooks: `architecture-review`, `code-review`, `feature-development`, `troubleshooting`, `devops`, `security`
 - [`docs/GOVERNANCE.md`](docs/GOVERNANCE.md) — SemVer, ADR process, dependency upgrades, breaking-change & deprecation & migration strategy
 - [`docs/adr/`](docs/adr) — Architecture Decision Records (start at [0002](docs/adr/0002-core-banking-architecture-baseline.md) for the architecture baseline)
+- [`docs/diagrams/`](docs/diagrams) — architecture diagrams (Mermaid): [context & container](docs/diagrams/README.md), [design/component](docs/diagrams/design-diagram.md), [deployment](docs/diagrams/deployment-diagram.md), [interaction/sequence](docs/diagrams/interaction-diagram.md), [data flow](docs/diagrams/dataflow-diagram.md)
