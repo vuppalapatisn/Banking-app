@@ -95,3 +95,13 @@ publishes a `TransactionEvent` that the notification, reporting, audit and AI-mo
 
 [`.github/workflows/ci.yml`](.github/workflows/ci.yml) builds & tests all modules on JDK 21 and builds a
 Docker image per service on push.
+
+## Contributing & governance
+
+This repository is **Claude Code compatible**. Before changing anything, read:
+
+- [`CLAUDE.md`](CLAUDE.md) — project overview, structure, build/test/deploy, coding standards, agent guidance, forbidden changes
+- [`.claude/rules/rules.md`](.claude/rules/rules.md) — non-negotiable development, security, testing, CI/CD and PR rules
+- [`.claude/skills/`](.claude/skills) — reusable task playbooks: `architecture-review`, `code-review`, `feature-development`, `troubleshooting`, `devops`, `security`
+- [`docs/GOVERNANCE.md`](docs/GOVERNANCE.md) — SemVer, ADR process, dependency upgrades, breaking-change & deprecation & migration strategy
+- [`docs/adr/`](docs/adr) — Architecture Decision Records (start at [0002](docs/adr/0002-core-banking-architecture-baseline.md) for the architecture baseline)
